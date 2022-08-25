@@ -45,10 +45,17 @@ textarea:focus {
 }
 
 .save {
-  background-color: rgb(212, 206, 206);
+  background-color: rgb(13, 13, 13);
   border: none;
   border-radius: 15px;
   padding: 5px 10px 5px 10px;
+  color: bisque;
+
+}
+
+.save:hover {
+  background-color: brown;
+  cursor: pointer;
 
 }
 

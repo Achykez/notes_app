@@ -22,10 +22,17 @@ const App = () => {
       text: "Do you wanna build a snowman?",
       date: "22/08/2022",
     },
+
+    
   ]);
+
+  const addNote = (text) => {
+    console.log(text);
+  }
+
   return (
     <div className="container">
-      <NotesList note={note} />
+      <NotesList note={note} handleAddNote={addNote} />
     </div>
   );
 };

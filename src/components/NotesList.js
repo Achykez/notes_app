@@ -2,7 +2,7 @@ import React from "react";
 import Notes from "./Notes";
 import AddNote from "./AddNote";
 
-const NotesList = ({ note, date }) => {
+const NotesList = ({ note, handleAddNote}) => {
   return (
     <div className="notes_list">
       {note.map((note) => (
