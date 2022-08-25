@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AddNote = () => {
+const AddNote = ({handleAddNote}) => {
   const [noteText, setNoteText] = useState("");
 
   const handleChange = (e) => {
@@ -8,7 +8,7 @@ const AddNote = () => {
   };
 
   const handleSaveCLick = () => {
-    
+    handleAddNote(noteText );
   }
 
   return (
@@ -22,7 +22,7 @@ const AddNote = () => {
       ></textarea>
       <div className="note_footer">
         <small>200 Remaining</small>
-        <button className="save" >Add New Note</button>
+        <button className="save" onClick={handleSaveCLick }>Add New Note</button>
       </div>
     </div>
   );

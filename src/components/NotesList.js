@@ -13,7 +13,7 @@ const NotesList = ({ note, handleAddNote}) => {
          />
       ))}
 
-      <AddNote />
+      <AddNote handleAddNote={handleAddNote}/>
     </div>
   );
 };

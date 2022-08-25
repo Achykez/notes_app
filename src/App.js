@@ -1,6 +1,7 @@
 import { useState } from "react";
 import NotesList from "./components/NotesList";
 import { nanoid } from "nanoid";
+import Notes from "./components/Notes";
 
 const App = () => {
   
@@ -27,7 +28,15 @@ const App = () => {
   ]);
 
   const addNote = (text) => {
-    console.log(text);
+    const date = new Date ();
+    const newNote = {
+      id: nanoid(),
+      text:text,
+      date: date.toLocaleDateString(),
+    }
+
+    const newNotes = [...note, newNote ];
+    setNote(newNotes);
   }
 
   return (
